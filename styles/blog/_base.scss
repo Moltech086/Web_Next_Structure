@@ -1,0 +1,47 @@
+// Blog Base Styles
+// ================
+
+@import 'variables';
+@import 'mixins';
+
+// Root CSS variables for backward compatibility
+:root {
+  --main-color: #{$blog-main-color};
+  --theme-color: #{$blog-theme-color};
+  --white-color: #{$blog-white-color};
+  --trend-text-color: #{$blog-trend-text-color};
+  --text-qote-bg: #{$blog-quote-bg};
+  --secondaryColor: #{$blog-secondary-color};
+  --themeBtnGrad: #{$blog-theme-gradient};
+  --secondaryBtnGrad: #{$blog-secondary-gradient};
+}
+
+
+// Base typography
+ol, ul {
+  padding-left: 2rem;
+  
+  @include blog-mobile {
+    padding-left: $blog-mobile-padding;
+  }
+}
+
+// Common blog container
+.blog-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  
+  @include blog-mobile {
+    padding: 0 15px;
+  }
+}
+
+// Common blog section
+.blog-section {
+  padding: $blog-section-padding;
+  
+  @include blog-mobile {
+    padding: 40px 0;
+  }
+}

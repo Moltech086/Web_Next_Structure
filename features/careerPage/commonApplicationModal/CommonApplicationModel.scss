@@ -1,0 +1,62 @@
+.simple-application-model {
+  max-width: 100%;
+  margin: 0 auto;
+  background: #fffaf2;
+  border: 1px solid #f7c89b;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-3px);
+  }
+
+  .message {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 10px;
+    color: var(--blackColor);
+    font-weight: 600;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+
+  .contact-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 12px;
+      font-size: 1rem;
+
+      a {
+        color: var(--themeColor);
+        text-decoration: none;
+        font-weight: 500;
+        transition: 0.5s all;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  .success-btn {
+    padding: 10px 25px;
+    border-radius: 25px;
+    font-weight: 600;
+  }
+}

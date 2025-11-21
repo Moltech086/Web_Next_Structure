@@ -1,0 +1,575 @@
+@import "Variables.scss";
+
+/* // Common Styles Start */
+/* fonts/fonts.css */
+@font-face {
+  font-family: "Hind Vadodara";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../public/fonts/font-1.woff2") format("woff2");
+  unicode-range: U+0951-0952, U+0964-0965, U+0A80-0AFF, U+200C-200D, U+20B9,
+    U+25CC, U+A830-A839;
+}
+
+@font-face {
+  font-family: "Hind Vadodara";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../public/fonts/font-2.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF,
+    U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
+    U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Hind Vadodara";
+  font-style: normal;
+  font-weight: 400 ;
+  font-display: swap ;
+  src: url("../public/fonts/font-3.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+    U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+a {
+  transition: 0.5s all;
+  color: #949191; // Improved link contrast
+  text-decoration: none;
+
+  &:hover {
+    color: var(--darkColor);
+  }
+}
+body {
+  padding: 0;
+  margin: 0;
+  background-color: var(--whiteColor);
+  font-family: "Hind Vadodara" !important;
+  overflow-x: hidden;
+  color: var(--blackColor);
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+  background: #f7f8fa;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #ef5323;
+  border-radius: 8px;
+}
+
+/* Add font-display: swap for custom font */
+/* fonts/fonts.css */
+@font-face {
+  font-family: "Hind Vadodara";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../public/fonts/font-1.woff2") format("woff2");
+  unicode-range: U+0951-0952, U+0964-0965, U+0A80-0AFF, U+200C-200D, U+20B9,
+    U+25CC, U+A830-A839;
+}
+
+@font-face {
+  font-family: "Hind Vadodara";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../public/fonts/font-2.woff2") format("woff2");
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF,
+    U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020,
+    U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+
+@font-face {
+  font-family: "Hind Vadodara";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../public/fonts/font-3.woff2") format("woff2");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA,
+    U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193,
+    U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+a {
+  transition: 0.5s all;
+  color: #949191; // Improved link contrast
+  text-decoration: none !important;
+
+  &:hover {
+    color: var(--darkColor);
+  }
+}
+
+// custom-margin start
+.m-0 {
+  margin: 0 !important;
+}
+
+// Margin Left
+.ml-1 {
+  margin-left: 0.25rem !important;
+}
+
+.ml-2 {
+  margin-left: 0.5rem !important;
+}
+
+.ml-3 {
+  margin-left: 0.75rem !important;
+}
+
+.ml-4 {
+  margin-left: 1rem !important;
+}
+
+.ml-5 {
+  margin-left: 1.25rem !important;
+}
+
+// Margin-Right
+.mr-1 {
+  margin-right: 0.25rem !important;
+}
+
+.mr-2 {
+  margin-right: 0.5rem !important;
+}
+
+.mr-3 {
+  margin-right: 0.75rem !important;
+}
+
+.mr-4 {
+  margin-right: 1rem !important;
+}
+
+.mr-5 {
+  margin-right: 1.25rem !important;
+}
+
+// Margin-top
+.mt-1 {
+  margin-top: 0.25rem !important;
+}
+
+.mt-2 {
+  margin-top: 0.5rem !important;
+}
+
+.mt-3 {
+  margin-top: 0.75rem !important;
+}
+
+.mt-4 {
+  margin-top: 1rem !important;
+}
+
+.mt-5 {
+  margin-top: 1.25rem !important;
+}
+
+.mt-6 {
+  margin-top: 1.5rem !important;
+}
+
+.mt-7 {
+  margin-top: 2rem !important;
+}
+
+.mt-8 {
+  margin-top: 2.25rem !important;
+}
+
+.mt-9 {
+  margin-top: 2.5rem !important;
+}
+
+.mt-10 {
+  margin-top: 2.75rem !important;
+}
+
+// Margin-bottom
+.mb-1 {
+  margin-bottom: 0.25rem !important;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem !important;
+}
+
+.mb-3 {
+  margin-bottom: 0.75rem !important;
+}
+
+.mb-4 {
+  margin-bottom: 1rem !important;
+}
+
+.mb-5 {
+  margin-bottom: 1.25rem !important;
+}
+
+// custom-margin end
+
+// custom-padding start
+.p-0 {
+  padding: 0 !important;
+}
+
+// Padding Left
+.pl-1 {
+  margin-left: 0.25rem !important;
+}
+
+.pl-2 {
+  margin-left: 0.5rem !important;
+}
+
+.pl-3 {
+  margin-left: 0.75rem !important;
+}
+
+.pl-4 {
+  margin-left: 1rem !important;
+}
+
+.pl-5 {
+  margin-left: 1.25rem !important;
+}
+
+// Padding-Right
+.pr-1 {
+  margin-right: 0.25rem !important;
+}
+
+.pr-2 {
+  margin-right: 0.5rem !important;
+}
+
+.pr-3 {
+  margin-right: 0.75rem !important;
+}
+
+.pr-4 {
+  margin-right: 1rem !important;
+}
+
+.pr-5 {
+  margin-right: 1.25rem !important;
+}
+
+// Padding-top
+.pt-1 {
+  margin-top: 0.25rem !important;
+}
+
+.pt-2 {
+  margin-top: 0.5rem !important;
+}
+
+.pt-3 {
+  margin-top: 0.75rem !important;
+}
+
+.pt-4 {
+  margin-top: 1rem !important;
+}
+
+.pt-5 {
+  margin-top: 1.25rem !important;
+}
+
+// Padding-bottom
+.pb-1 {
+  margin-bottom: 0.25rem !important;
+}
+
+.pb-2 {
+  margin-bottom: 0.5rem !important;
+}
+
+.pb-3 {
+  margin-bottom: 0.75rem !important;
+}
+
+.pb-4 {
+  margin-bottom: 1rem !important;
+}
+
+.pb-5 {
+  margin-bottom: 1.25rem !important;
+}
+@media (max-width: 991px) {
+  .container,
+  .container-sm {
+    max-width: 85%;
+  }
+}
+@media (max-width: 767px) {
+  .container,
+  .container-sm {
+    max-width: 95%;
+  }
+}
+// custom-padding end
+
+// Center Title CSS
+
+.title-center {
+  .sub-title {
+    color: #999999;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    text-align: center;
+    display: block;
+    margin-bottom: 0;
+  }
+
+  .title {
+    font-size: var(--commonFontSize-Title);
+    font-weight: 600;
+    color: var(--blackColor);
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 0;
+
+    span {
+      color: var(--themeColor);
+    }
+  }
+
+  p {
+    text-align: center;
+    font-size: var(--commonFontSize-large);
+  }
+}
+
+.inquiry-contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 5px 0 20px;
+
+  .center-contact {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--commonFontSize-large);
+
+    @media only screen and (max-width: 360px) {
+      flex-direction: column;
+
+      span {
+        display: none !important;
+      }
+    }
+
+    p {
+      margin: 0;
+      font-size: var(--commonFontSize-large);
+      color: var(--blackColor);
+      font-weight: 600;
+      margin-right: 5px;
+    }
+
+    .contact-middle {
+      display: flex;
+      align-items: center;
+
+      a {
+        color: var(--themeColor);
+      }
+    }
+
+    span {
+      margin: 0 10px;
+      display: flex;
+      align-items: center;
+      font-size: var(--commonFontSize);
+      padding-bottom: 3px;
+    }
+  }
+}
+
+.title-left {
+  .sub-title {
+    color: #999999;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
+    text-align: center;
+    display: block;
+    margin-bottom: 0;
+  }
+
+  .title {
+    font-size: var(--commonFontSize-Title);
+    font-weight: 600;
+    color: var(--blackColor);
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 0;
+
+    span {
+      color: var(--themeColor);
+    }
+
+    @media only screen and (max-width: 767px) {
+      margin-bottom: 10px !important;
+    }
+  }
+
+  h6,
+  .left-title-small {
+    color: var(--blackColor);
+    font-size: var(--commonFontSize-Title);
+    padding-left: 100px;
+  }
+}
+
+.relative {
+  position: relative !important;
+}
+
+// .headline-title {
+//   font-size: 35px;
+//   margin-bottom: 20px;
+//   color: #25245d;
+//   font-weight: 600;
+//   width: 70%;
+
+//   @media (max-width: 1024px) {
+//     width: 100%;
+//   }
+//   .highlight{
+//     color: var(--themeColor);
+//   }
+// }
+
+.highlight {
+  color: var(--themeColor);
+}
+
+// Animations
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(-5%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+
+  50% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+// Utility Classes (mimicking Tailwind behavior)
+.animate-bounce {
+  animation: bounce 1.5s infinite;
+}
+
+.animate-fade-in {
+  animation: fade-in 1s ease-out forwards;
+}
+
+.animate-slide-up {
+  animation: slide-up 0.8s ease-out forwards;
+}
+
+.service-btn {
+  background-color: var(--themeColor);
+  border: 1px solid transparent;
+  transition: all 300ms ease;
+  font-weight: 500;
+  font-size: var(--commonFontSize);
+  border-radius: 35px;
+  padding: 5px 7px 5px 15px;
+  color: var(--whiteColor);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 10px;
+  width: fit-content;
+
+  @media (max-width: 768px) {
+    margin: 25px 10px;
+  }
+
+  &:hover {
+    color: var(--whiteColor);
+  }
+
+  span {
+    line-height: normal;
+  }
+
+  .component-iconify {
+    background-color: var(--whiteColor);
+    color: var(--themeColor);
+    border-radius: 50%;
+  }
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+.sticky-position {
+  position: sticky !important;
+  top: 120px;
+  max-height: fit-content;
+   @media (max-width: 1199px) {
+    position: static !important;
+    top: auto;
+    max-height: none;
+  }
+}
+
+
+table {
+  p{
+    margin: 0;
+  }
+}

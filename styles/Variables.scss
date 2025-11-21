@@ -1,0 +1,146 @@
+:root {
+  // Font Size 
+  --commonFontSize-Experts: 180px;
+  --commonFontSize-Watermark: 170px;
+  --commonFontSize-Title: 40px;
+  --commonFontSize-MainTitle: 35px;
+  --commonFontSize-subTitle: 32px;
+  --commonFontSize-buttonicon: 42px;
+  --section-titleFontSize: 42px;
+  --commonFontSize-breadcomes: 36px;
+  --commonFontSize-4extraLarge: 28px;
+  --commonFontSize-3extraLarge: 26px;
+  --commonFontSize-2extraLarge: 24px;
+  --commonFontSize-extraLarge: 22px;
+  --commonFontSize-large: 20px;
+  --commonFontSize: 18px;
+  --commonFontSize-medium: 16px;
+  --commonFontSize-small: 14px;
+  --commonFontSize-extraSmall: 12px;
+  --commonFontSize-2extraSmall: 11px;
+  --expert-watermark: 140px;
+  --expert-content: 40px;
+  --counter-Font: 70px;
+
+  --themeColor: #ef5323;
+  --themeColorLight: #ef52230e;
+  --themeColor2: #115dac;
+  --themeColor2light: #115dac1f;
+  --themeColor-light: #fff3ec;
+  --themeDarkColor: #292929;
+  --themeDarkColorBlue: #081236;
+  --bodyColor: #777777;
+  --lightBorderColor: #e7eaee;
+  --lightColor: #F6F6F6;
+  --lightGray: #F4F5F5;
+  --whiteColor: #ffffff;
+  --darkBtnHover: #434343;
+  --textColor: #333;
+  --textColor-medium: #666;
+  --textColor-light: #999;
+  --greyTextColor: #AAAAAA;
+  --darkBgColor: #3a3d43;
+  --borderColor: #e0e0e0;
+  --footerTextColor: #c7c7c7;
+  --blackColor: #000;
+  --lightGreyBG: #f7f7f7;
+  --redBg: #c9666f;
+  --skyblueBg: #2f89ff;
+  --yellowBg: #e8bd3f;
+  --pinkBg: #ff5fa7;
+  --greenBg: #6dcf97;
+  --lightGreenBg: #63dae0;
+  --purpulBg: #9b4fe2;
+  --footerBBg: #292929;
+  --wb-typo-font-weight: 600;
+
+  --redThemeColor: #c00000;
+  // Button Color
+  --darkButtonBgColor: var(--darkTextColor);
+  --darkButtonHoverBgColor: #434343;
+
+
+
+
+
+  // Box-shadow
+  --cardBoxShadow: 5px 0px 39px 0px rgba(0, 0, 0, 0.07);
+
+}
+
+@media only screen and (max-width: 1400px) {
+
+  :root {
+    --expert-watermark: 100px;
+    --expert-content: 35px;
+    --counter-Font: 68px;
+    --section-titleFontSize: 42px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+
+  :root {
+    --expert-watermark: 90px;
+    --expert-content: 32px;
+    --counter-Font: 65px;
+    --section-titleFontSize: 40px;
+    --commonFontSize-large: 18px;
+    --commonFontSize-MainTitle: 30px;
+      --commonFontSize-subTitle: 28px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+
+  :root {
+    --commonFontSize-subTitle: 28px;
+    --commonFontSize-Title: 32px;
+    --commonFontSize: 15px;
+    --commonFontSize-Watermark: 100px;
+    --commonFontSize-breadcomes: 24px;
+    --expert-watermark: 85px;
+    --expert-content: 30px;
+    --counter-Font: 55px;
+    --section-titleFontSize: 35px;
+    --commonFontSize-large: 17px;
+    --commonFontSize-MainTitle: 28px;
+      --commonFontSize-subTitle: 26px;
+  }
+}
+
+
+
+@media only screen and (max-width: 600px) {
+
+  :root {
+    --commonFontSize-subTitle: 26px;
+    --commonFontSize-Title: 30px;
+    --commonFontSize: 15px;
+    --commonFontSize-Watermark: 120px;
+    --commonFontSize-medium: 14px --commonFontSize-Experts: 100px;
+    --commonFontSize-2extraLarge: 20px;
+    --commonFontSize-breadcomes: 22px;
+    --expert-watermark: 82px;
+    --expert-content: 28px;
+    --counter-Font: 52px;
+    --section-titleFontSize: 32px;
+    --commonFontSize-large: 15px;
+    --commonFontSize-MainTitle: 25px;
+      --commonFontSize-subTitle: 23px;
+  }
+
+  @media only screen and (max-width: 450px) {
+
+    :root {
+      --expert-watermark: 55px;
+      --expert-content: 18px;
+      --commonFontSize-breadcomes: 20px;
+      --commonFontSize-Watermark: 90px;
+      --counter-Font: 50px;
+      --commonFontSize-Title: 23px;
+      --section-titleFontSize: 25px;
+      --commonFontSize-large: 13px;
+    }
+  }
+}

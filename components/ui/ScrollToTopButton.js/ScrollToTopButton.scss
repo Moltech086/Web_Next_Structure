@@ -1,0 +1,59 @@
+.scroll-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 1000;
+
+  .scroll-to-top__button {
+    background-color: var(--themeColor);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideUp 0.3s ease forwards;
+    height: 100%;
+    height: 35px;
+    width: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .scroll-to-top__button {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: background-color 0.3s ease;
+
+    &.visible {
+      animation: slideUp 0.3s ease forwards;
+    }
+
+    &.hidden {
+      animation: slideDown 0.3s ease forwards;
+    }
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  @keyframes slideDown {
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+  }
+}

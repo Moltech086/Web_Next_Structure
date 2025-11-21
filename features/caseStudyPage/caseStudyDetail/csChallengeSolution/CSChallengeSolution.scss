@@ -1,0 +1,143 @@
+.cs-challenge-section {
+    padding: 3rem 1rem;
+    background-color: #fff;
+
+    .container {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 0 1rem;
+    }
+
+    .section-header {
+        text-align: center;
+        margin-bottom: 2rem;
+
+        h2 {
+            font-size: var(--commonFontSize-MainTitle);
+            font-weight: 700;
+            color: #111827;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            font-size: 1.25rem;
+            color: #6b7280;
+            max-width: 48rem;
+            margin: 0 auto;
+        }
+    }
+
+    .cards-grid {
+        display: grid;
+        gap: 2rem;
+
+        @media (min-width: 1024px) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        .card {
+            background-color: #ffffff;
+            border-radius: 1rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+
+            .card-title {
+                display: flex;
+                align-items: center;
+                gap: 0.75rem;
+                padding: 1rem;
+                border-bottom: 1px solid var(--borderColor);
+                margin-bottom: 0;
+
+                &.red {
+                    .badge-icon {
+                        color: #dc2626;
+                    }
+                }
+
+                .red {
+                    color: #dc2626;
+                }
+
+                .green {
+                    color: #16a34a;
+                }
+
+                &.green {
+                    .badge-icon {
+                        color: #16a34a;
+                    }
+                }
+
+                h3 {
+                    font-size: 1.5rem;
+                    font-weight: 700;
+                    color: #111827;
+                    margin-bottom: 0;
+
+                }
+
+                .badge-icon {
+                    width: 2rem;
+                    height: 2rem;
+                }
+            }
+
+            .card-content {
+                display: flex;
+                flex-direction: column;
+                gap: 1.5rem;
+                padding: 1.5rem;
+
+
+                .item {
+                    display: flex;
+                    align-items: flex-start;
+                    gap: 1rem;
+
+                    .icon-wrapper {
+                        width: 3rem;
+                        height: 3rem;
+                        border-radius: 0.75rem;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        flex-shrink: 0;
+
+                        &.red {
+                            background-color: #fee2e2;
+
+                            .icon {
+                                color: #dc2626;
+                            }
+                        }
+
+                        &.green {
+                            background-color: #d1fae5;
+
+                            .icon {
+                                color: #16a34a;
+                            }
+                        }
+
+                        .icon {
+                            width: 1.5rem;
+                            height: 1.5rem;
+                        }
+                    }
+
+                    h4 {
+                        font-weight: 600;
+                        color: #111827;
+                        margin-bottom: 0.25rem;
+                        font-size: 1rem;
+                    }
+
+                    p {
+                        color: #6b7280;
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}

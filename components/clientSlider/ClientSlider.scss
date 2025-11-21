@@ -1,0 +1,29 @@
+.slider-client {
+  .client-logo {
+    padding: 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .embla {
+    overflow: hidden;
+  }
+  .embla__container {
+    display: flex;
+  }
+  .embla__slide {
+    flex: 0 0 50%; // mobile
+    min-width: 0;
+  }
+
+  @media (min-width: 991px) {
+    .embla__slide {
+      flex: 0 0 25%; // tablet
+    }
+  }
+  @media (min-width: 1025px) {
+    .embla__slide {
+      flex: 0 0 20%; // desktop
+    }
+  }
+}

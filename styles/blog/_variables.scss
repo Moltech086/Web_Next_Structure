@@ -1,0 +1,37 @@
+// Blog SCSS Variables
+// ===================
+
+// Colors
+$blog-main-color: #040821;
+$blog-theme-color: #f85b05;
+$blog-white-color: #fff;
+$blog-text-color: #2e2e2e;
+$blog-trend-text-color: #555555;
+$blog-quote-bg: #ededed;
+$blog-secondary-color: gray;
+
+// Gradients
+$blog-theme-gradient: linear-gradient(to top, #f85b05 0%, #b93b00 100%);
+$blog-secondary-gradient: linear-gradient(to right, #606c88 0%, #3f4c6b 51%, #606c88 100%);
+$blog-hero-gradient: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+
+// Spacing
+$blog-section-padding: 80px 0;
+$blog-card-padding: 24px;
+$blog-mobile-padding: 0.5rem;
+
+// Breakpoints
+$blog-mobile-breakpoint: 768px;
+$blog-tablet-breakpoint: 992px;
+$blog-desktop-breakpoint: 1200px;
+
+// Typography
+$blog-title-font-size: 2.5rem;
+$blog-subtitle-font-size: 1.5rem;
+$blog-body-font-size: 1rem;
+$blog-small-font-size: 0.875rem;
+
+// Z-index
+$blog-modal-z: 1050;
+$blog-header-z: 1000;
+$blog-background-z: 1;

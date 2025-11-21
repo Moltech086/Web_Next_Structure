@@ -1,0 +1,131 @@
+.model-center-main {
+  .modal-dialog {
+    top: 50%;
+    transform: translateY(-50%) !important;
+     margin: 0 auto;
+    @media (max-width: 767px) {
+      top: 0;
+      transform: unset !important;
+    }
+    .modal-header {
+      padding: 15px;
+      border-color: var(--themeColor);
+      position: relative;
+
+      .modal-title {
+        font-size: 100%;
+        font-weight: 600;
+        color: var(--themeColor);
+        margin-bottom: 0;
+        font-size: var(--commonFontSize-large);
+      }
+
+      .custom-close-btn {
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+        transition: transform 0.5s ease;
+
+        &:hover {
+          transform: rotate(180deg);
+        }
+
+        svg {
+          color: var(--themeColor);
+        }
+      }
+    }
+  }
+ 
+
+  &.w-30 {
+    .modal-dialog {
+      max-width: 30%;
+    }
+  }
+
+  &.w-35 {
+    .modal-dialog {
+      max-width: 35%;
+    }
+  }
+
+  &.w-40 {
+    .modal-dialog {
+      max-width: 40%;
+    }
+  }
+
+  &.w-45 {
+    .modal-dialog {
+      max-width: 45%;
+    }
+  }
+
+  &.w-5s {
+    .modal-dialog {
+      max-width: 50%;
+    }
+  }
+
+  &.w-55 {
+    .modal-dialog {
+      max-width: 55%;
+    }
+  }
+
+  &.w-60 {
+    .modal-dialog {
+      max-width: 60%;
+    }
+  }
+
+  &.w-65 {
+    .modal-dialog {
+      max-width: 65%;
+    }
+  }
+
+  &.w-70 {
+    .modal-dialog {
+      max-width: 70%;
+    }
+  }
+
+  &.w-75 {
+    .modal-dialog {
+      max-width: 75%;
+    }
+  }
+}
+@media (max-width: 1200px) {
+  .model-center-main {
+    &.w-30,
+    &.w-35,
+    &.w-40,
+    &.w-45,
+    &.w-50,
+    &.w-55,
+    &.w-65,
+    &.w-70,
+    &.w-75 {
+      .modal-dialog {
+        max-width: 85%;
+      }
+    }
+  }
+}
+@media (max-width: 991px) {
+  .model-center-main.w-55 .modal-dialog {
+    max-width: 80%;
+  }
+}
+@media (max-width: 550px) {
+  .model-center-main.w-55 .modal-dialog {
+    max-width: 90%;
+    margin: auto;
+  }
+}

@@ -1,0 +1,173 @@
+.application-model {
+  .content {
+    .col-5 {
+      border-right: 1px solid var(--themeColor);
+      .job-role {
+        .job-title {
+          font-size: var(--commonFontSize-small);
+          font-weight: 500;
+          color: var(--textColor-light);
+          text-transform: uppercase;
+          margin-bottom: -5px;
+        }
+        .job-name {
+          font-size: var(--commonFontSize-3extraLarge);
+          font-weight: 500;
+          letter-spacing: 1px;
+          color: var(--blackColor);
+          font-weight: 500;
+          margin-bottom: -5px;
+        }
+      }
+      .job-location {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 300px;
+        margin-bottom: 10px;
+      }
+      .job-resp {
+        font-size: var(--commonFontSize-small);
+        font-weight: 500;
+        color: var(--textColor-light);
+        text-transform: uppercase;
+        margin-bottom: -5px;
+        margin-top: 10px;
+        ul {
+          li {
+            font-size: var(--commonFontSize-small);
+            text-transform: none;
+            color: var(--blackColor);
+            font-weight: 400;
+          }
+        }
+      }
+      .job-req {
+        .title {
+          font-size: var(--commonFontSize-small);
+          font-weight: 500;
+          color: var(--textColor-light);
+          text-transform: uppercase;
+          margin-bottom: -5px;
+          margin-top: 10px;
+        }
+        .job-req-description {
+          font-size: var(--commonFontSize-small);
+          text-transform: none;
+          color: var(--blackColor);
+          font-weight: 400;
+          margin-top: 5px;
+        }
+      }
+      .job-service {
+        position: relative;
+        .title {
+          font-size: var(--commonFontSize-small);
+          font-weight: 500;
+          color: var(--textColor-light);
+          text-transform: uppercase;
+          margin-bottom: -5px;
+          margin-top: 10px;
+        }
+        .job-req-description {
+          font-size: var(--commonFontSize-small);
+          text-transform: none;
+          color: var(--blackColor);
+          font-weight: 400;
+          margin-top: 5px;
+        }
+      }
+    }
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 15px;
+
+    .form-group {
+      margin-bottom: 20px;
+      width: 100%;
+
+      label {
+        display: block;
+        font-size: var(--commonFontSize-medium);
+      }
+
+      input {
+        width: 100%;
+        padding: 4px;
+        font-size: var(--commonFontSize-medium);
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        &:focus {
+          outline: none;
+          border-color: var(--themeColor);
+        }
+      }
+
+      button {
+        padding: 8px 20px;
+        border-radius: 7px;
+        -webkit-border-radius: 7px;
+        -moz-border-radius: 7px;
+        -ms-border-radius: 7px;
+        -o-border-radius: 7px;
+        font-weight: 500;
+        text-align: center;
+        min-width: 100px;
+        width: max-content;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        border: none;
+        font-size: 90%;
+        background-size: 180% 100%;
+        transition: all 0.4s ease-in-out;
+        background-color: var(--themeColor);
+        color: var(--whiteColor);
+        font-weight: 500;
+
+        &:hover {
+          background-color: darken(#ef5323, 10%);
+        }
+      }
+    }
+
+    .checkbox-group {
+      display: flex;
+      align-items: center;
+
+      input {
+        margin-right: 8px;
+      }
+
+      label {
+        font-size: var(--commonFontSize-small);
+      }
+    }
+
+    .captcha-box {
+      border: 1px solid #ccc;
+      padding: 15px;
+      text-align: center;
+      width: 100%;
+    }
+
+    .submit-button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: var(--commonFontSize-medium);
+
+      &:hover {
+        background-color: #0056b3;
+      }
+    }
+  }
+}

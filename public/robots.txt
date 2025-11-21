@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://www.mol-tech.us
+
+# Sitemaps
+Sitemap: https://www.mol-tech.us/sitemap.xml
