@@ -4,24 +4,24 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import dynamic from "next/dynamic";
 import { Provider } from "react-redux";
-import { store } from "@/components/layout/store";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "react-toastify/dist/ReactToastify.css";
+import { store } from "./slice/store";
 
 const ToastContainer = dynamic(
   () => import("react-toastify").then((m) => m.ToastContainer),
   { ssr: false }
 );
 
-const ScrollToTopButton = dynamic(
-  () => import("@/components/ui/ScrollToTopButton.js/ScrollToTopButton"),
-  { ssr: false }  // This already makes it client-only
-);
+// const ScrollToTopButton = dynamic(
+//   () => import("@/components/ui/ScrollToTopButton.js/ScrollToTopButton"),
+//   { ssr: false }  // This already makes it client-only
+// );
 
-const PageLoader = dynamic(
-  () => import("@/components/ui/pageLoader/PageLoader"),
-  { ssr: false }
-);
+// const PageLoader = dynamic(
+//   () => import("@/components/ui/pageLoader/PageLoader"),
+//   { ssr: false }
+// );
 
 export default function Providers({ children }) {
   const router = useRouter();
@@ -43,9 +43,12 @@ export default function Providers({ children }) {
 
   return (
     <Provider store={store}>
-      {loading && <PageLoader />}
+      {loading && 
+      // <PageLoader />
+      <></>
+      }
       {children}
-      <ScrollToTopButton />
+      {/* <ScrollToTopButton /> */}
       <ToastContainer position="bottom-right" autoClose={3000} />
     </Provider>
   );

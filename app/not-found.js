@@ -1,4 +1,4 @@
-import NotFound from "@/features/notFoundPage/NotFound";
+// import NotFound from "@/features/notFoundPage/NotFound";
 
 export const metadata = {
   title: "Page Not Found - 404 | Moltech Solutions Inc",
@@ -10,5 +10,7 @@ export const metadata = {
 };
 
 export default function NotFoundPage() {
-  return <NotFound />;
+  return 
+  // <NotFound />
+  ;
 }

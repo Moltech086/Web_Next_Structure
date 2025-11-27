@@ -1,10 +1,12 @@
 import { Inter } from "next/font/google";
 import Script from "next/script";
-import Footer from "@/components/shared/footer/Footer";
-import Header from "@/components/shared/header/Header";
+// import Footer from "@/components/shared/footer/Footer";
+// import Header from "@/components/shared/header/Header";
 import Providers from "./providers";
 import { BASE_URL } from "@/lib/utils/baseUrl";
-import "../styles/Common.scss";
+import Header from "@/components/ui/header/Header";
+import Footer from "@/components/ui/footer/Footer";
+// import "../styles/Common.scss";
 
 const inter = Inter({ subsets: ["latin"] });
 
