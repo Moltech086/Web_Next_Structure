@@ -1,0 +1,447 @@
+/* ===============================
+   ROOT VARIABLES
+================================ */
+:root {
+  // Colors
+  --primary-color: #f85b05;
+  --secondary-color: #feebe1;
+  --text-color-dark: #212529;
+  --theme-color-bg: #131313;
+  --light-bg-color: #ffefe6;
+  --thme-color-light: #feebe1;
+  --body-text-color: #494949;
+  --header-text-color: #1c1c1c;
+  --section-bg-color: #f3f6fd;
+  --white-color: #ffffff;
+  --black-color: #000000;
+  --warning-color: #c61212;
+
+  // Borders & Shadows
+  --border-color: #c7c7c7;
+  --border-color-light: #494949;
+  --box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+/* ===============================
+   CTA FORM SECTION
+================================ */
+.cta-form-section {
+  margin: 15px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+
+  /* LEFT SECTION */
+  .left-info-sec {
+    border: 1px solid var(--border-color);
+    padding: 50px;
+    border-radius: 15px;
+
+    .contact-details {
+      margin-top: 50px;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+    }
+
+    /* MAP SECTION */
+    .map-location-section {
+      margin-top: 70px;
+      width: 100%;
+
+      .map-section {
+        position: relative;
+        width: 830px;
+        height: 415px;
+
+        img {
+          width: 100%;
+          height: auto;
+          opacity: 0.2;
+        }
+
+        /* LOCATION MARKER */
+        .location {
+          position: absolute;
+
+          .pin-animation {
+            position: relative;
+            cursor: pointer;
+
+            .map-marker {
+              --dot-size: 14px;
+              --dot-color: var(--primary-color);
+              --ring-size: 44px;
+
+              width: var(--ring-size);
+              height: var(--ring-size);
+              display: grid;
+              place-items: center;
+              pointer-events: auto;
+              z-index: 1000;
+
+              .dot {
+                width: var(--dot-size);
+                height: var(--dot-size);
+                background: var(--dot-color);
+                border-radius: 50%;
+                box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.9) inset;
+                transform: translateY(2px);
+                z-index: 2;
+              }
+
+              .ring {
+                position: absolute;
+                width: var(--ring-size);
+                height: var(--ring-size);
+                border-radius: 50%;
+                background: radial-gradient(
+                  circle,
+                  rgba(255, 107, 21, 0.7) 30%,
+                  rgba(255, 107, 21, 0.5) 40%,
+                  transparent 51%
+                );
+                animation: ripple 1.8s ease-out infinite;
+                z-index: 1;
+              }
+
+              &::after {
+                content: "";
+                position: absolute;
+                width: calc(var(--ring-size) * 0.7);
+                height: calc(var(--ring-size) * 0.7);
+                border-radius: 50%;
+                background: rgba(255, 107, 21, 0.07);
+                animation: subtle 2.6s ease-in-out infinite;
+                z-index: 0;
+              }
+
+              /* Ripple Animation */
+              @keyframes ripple {
+                0% {
+                  transform: scale(0.4);
+                  opacity: 0.9;
+                }
+                40% {
+                  transform: scale(0.9);
+                  opacity: 0.36;
+                }
+                100% {
+                  transform: scale(1.6);
+                  opacity: 0;
+                }
+              }
+
+              /* Inner glow animation */
+              @keyframes subtle {
+                0% {
+                  transform: scale(0.9);
+                  opacity: 0.7;
+                }
+                50% {
+                  transform: scale(1);
+                  opacity: 0.45;
+                }
+                100% {
+                  transform: scale(0.9);
+                  opacity: 0.7;
+                }
+              }
+            }
+
+            /* Tooltip */
+            .tooltip-box {
+              display: none;
+              position: absolute;
+              width: 190px;
+              bottom: 40px;
+              left: 50%;
+              transform: translateX(-50%);
+
+              .inner-tooltip {
+                position: relative;
+                background: var(--white-color);
+                padding: 10px;
+                border-radius: 10px;
+                box-shadow: var(--box-shadow);
+                display: inline-block;
+
+                &::before {
+                  content: "";
+                  position: absolute;
+                  bottom: -12px;
+                  left: 93px;
+                  transform: translateX(-32%);
+                  border-left: 7px solid transparent;
+                  border-right: 7px solid transparent;
+                  border-top: 14px solid var(--white-color);
+                }
+
+                .flag-country {
+                  display: flex;
+                  align-items: center;
+
+                  .iconify {
+                    font-size: 2.2rem;
+                  }
+
+                  span {
+                    font-size: 1.25rem;
+                    font-weight: 600;
+                    margin-left: 10px;
+                  }
+                }
+
+                .address-info {
+                  margin-top: 5px;
+
+                  a {
+                    display: block;
+                    font-size: 0.8rem;
+                    color: var(--header-text-color);
+                    text-decoration: none;
+                    transition: 0.5s;
+
+                    &:hover {
+                      color: var(--primary-color);
+                    }
+                  }
+                }
+              }
+            }
+
+            &:hover .tooltip-box {
+              display: block;
+            }
+          }
+
+          /* POSITION FOR COUNTRIES */
+          &.country-1 {
+            left: 15%;
+            top: 46%;
+            transform: translate(-50%, -100%);
+          }
+          &.country-2 {
+            left: 51%;
+            top: 41%;
+            transform: translate(-50%, -100%);
+          }
+          &.country-3 {
+            left: 68%;
+            top: 55%;
+            transform: translate(-50%, -100%);
+          }
+          &.country-4 {
+            left: 76%;
+            top: 70%;
+            transform: translate(-50%, -100%);
+          }
+        }
+      }
+    }
+  }
+
+  /* INFO CARD */
+  .info-card {
+    .icons {
+      color: var(--primary-color);
+
+      .iconify {
+        font-size: 3rem;
+      }
+    }
+
+    .details {
+      margin-top: 20px;
+      display: grid;
+      gap: 10px;
+
+      .title {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: var(--header-text-color);
+        margin-bottom: 5px;
+      }
+
+      .phone,
+      .email {
+        a {
+          color: var(--header-text-color);
+          text-decoration: none;
+          transition: 0.5s;
+
+          &:hover {
+            color: var(--primary-color);
+          }
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      border-left: 1px solid;
+      padding-left: 50px;
+      box-shadow: -10px 0 15px -14px rgba(149, 157, 165, 0.519);
+    }
+  }
+
+  /* RIGHT FORM SECTION */
+  .right-form-sec {
+    border: 1px solid var(--border-color);
+    padding: 50px;
+    border-radius: 15px;
+
+    .cta-form {
+      border-top: 1px solid var(--border-color);
+      margin-top: 30px;
+      padding-top: 30px;
+
+      .form-group {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-bottom: 17px;
+
+        &.checkbox {
+          flex-direction: row;
+          align-items: center;
+
+          span {
+            margin-left: 10px;
+
+            a {
+              color: var(--primary-color);
+            }
+          }
+        }
+
+        input,
+        textarea,
+        select {
+          padding: 6px 10px;
+          border: 1px solid var(--border-color);
+          border-radius: 7px;
+          transition: 0.5s;
+
+          &:focus {
+            outline: none;
+            border-color: var(--primary-color);
+          }
+        }
+
+        textarea {
+          min-height: 130px;
+        }
+
+        label {
+          color: var(--text-color-dark);
+          font-weight: 600;
+          span{
+            color: var(--warning-color);
+          }
+        }
+      }
+
+      .section-form {
+        display: grid;
+        grid-template-columns: 1fr;
+      }
+
+      .section-form-2 {
+        display: grid;
+        gap: 15px;
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+    .btn-sec{
+      margin-top: 30px;
+      .btn{
+        width: 100%}
+    }
+  }
+}
+
+/* ===============================
+   CUSTOM CHECKBOX
+================================ */
+.checkbox-wrapper-19 {
+  --background-color: #fff;
+  --checkbox-height: 25px;
+  box-sizing: border-box;
+
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  .check-box {
+    width: var(--checkbox-height);
+    height: var(--checkbox-height);
+    background-color: transparent;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    position: relative;
+    display: inline-block;
+    transition: border-color 0.2s;
+    cursor: pointer;
+
+    &::before,
+    &::after {
+      position: absolute;
+      width: calc(var(--checkbox-height) * 0.2);
+      height: 0;
+      background-color: var(--primary-color);
+      border-radius: 5px;
+      content: "";
+      transform-origin: left top;
+      transition: opacity 0.5s;
+    }
+
+    &::before {
+      top: calc(var(--checkbox-height) * 0.78);
+      left: calc(var(--checkbox-height) * 0.45);
+      transform: rotate(-135deg);
+      box-shadow: 0 0 0 calc(var(--checkbox-height) * 0.05)
+        var(--background-color);
+    }
+
+    &::after {
+      top: calc(var(--checkbox-height) * 0.35);
+      left: calc(var(--checkbox-height) * 0.01);
+      transform: rotate(-45deg);
+    }
+  }
+
+  input[type="checkbox"]:checked + .check-box {
+    border-color: var(--primary-color);
+
+    &::after {
+      height: calc(var(--checkbox-height) / 2);
+      animation: dothabottomcheck-19 0.2s ease forwards;
+    }
+
+    &::before {
+      height: calc(var(--checkbox-height) * 1.2);
+      animation: dothatopcheck-19 0.4s ease forwards;
+    }
+  }
+}
+
+/* Checkbox animations */
+@keyframes dothabottomcheck-19 {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: calc(var(--checkbox-height) / 2);
+  }
+}
+
+@keyframes dothatopcheck-19 {
+  0% {
+    height: 0;
+  }
+  50% {
+    height: 0;
+  }
+  100% {
+    height: calc(var(--checkbox-height) * 1.2);
+  }
+}

@@ -18,11 +18,12 @@
   --box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 .title-section {
+  margin-bottom: 15px;
   .highlight-text {
     color: var(--primary-color);
     text-transform: uppercase;
     letter-spacing: 5px;
-    font-size: 1.25rem;
+    font-size: 1.25rem; 
   }
   .main-title {
     font-size: 3rem;

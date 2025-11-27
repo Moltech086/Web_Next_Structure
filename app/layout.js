@@ -6,6 +6,7 @@ import Providers from "./providers";
 import { BASE_URL } from "@/lib/utils/baseUrl";
 import Header from "@/components/ui/header/Header";
 import Footer from "@/components/ui/footer/Footer";
+import CTAForm from "@/components/shared/cTAForm/CTAForm";
 // import "../styles/Common.scss";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -96,6 +97,7 @@ export default function RootLayout({ children }) {
         <Providers>
           <Header />
           <main>{children}</main>
+          <CTAForm/>
           <Footer />
         </Providers>
         <div id="modal-root" />
