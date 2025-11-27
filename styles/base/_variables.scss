@@ -1,27 +1,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-:root {
-    // Colors
-    --primary-color: #F85B05;
-    --secondary-color: #feebe1;
-    --text-color-dark: #212529;
-    --theme-color-bg: #131313;
-    --light-bg-color: #FFEFE6;
-    --thme-color-light: #feebe1;
-    --body-text-color: #494949;
-    --header-text-color: #1C1C1C;
-    --section-bg-color: #F3F6FD;
-    --white-color: #ffffff;
-    --black-color: #000000;
+// :root {
+//   // Colors
+//   --primary-color: #f85b05;
+//   --secondary-color: #feebe1;
+//   --text-color-dark: #212529;
+//   --theme-color-bg: #131313;
+//   --light-bg-color: #ffefe6;
+//   --thme-color-light: #feebe1;
+//   --body-text-color: #494949;
+//   --header-text-color: #1c1c1c;
+//   --section-bg-color: #f3f6fd;
+//   --white-color: #ffffff;
+//   --black-color: #000000;
 
-    // Borders and shadows
-    --border-color: #C7C7C7;
-    --border-color-light: #494949;
-    --box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-}
+//   // Borders and shadows
+//   --border-color: #c7c7c7;
+//   --border-color-light: #494949;
+//   --box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+// }
 
 // Font Variables
-$font-family-primary: "Poppins", "Segoe UI", sans-serif;
+$font-family-primary: "Inter", sans-serif;
 $font-family-secondary: "Inter", sans-serif;
 
 // Font Sizes
