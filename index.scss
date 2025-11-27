@@ -1,1 +1,6 @@
-@import "./styles/main.scss";
+@import "./styles/global/main.scss";
+@use "../base/reset";
+@use "../base/typography";
+@use "../base/variables" as *;
+@use "../base/mixins" as *;
+@use "../helpers/mediaQueries" as *;
