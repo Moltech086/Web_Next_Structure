@@ -37,6 +37,9 @@ const Header = () => {
             <button className="drop-btn">
               Company <span>▼</span>
             </button>
+            <button className="drop-btn">
+              Company <span>▼</span>
+            </button>
 
             {openCompany && (
               <div className="simple-dropdown">
@@ -66,9 +69,13 @@ const Header = () => {
         </nav>
 
         {/* CTA BUTTON */}
-        <Link href="/contact" className="chat-btn">
-          <span>💬</span> Let’s Chat
-        </Link>
+        <ButtonsLink
+          buttonText="Let’s Chat"
+          icon="line-md:chat-round-dots"
+          classes="large-btn primary-btn"
+          iconAfter={true}
+          href=""
+        />
       </div>
       {openServices && (
         <div className="mega-dropdown">
