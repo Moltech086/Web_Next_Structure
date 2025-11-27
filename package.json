@@ -5,7 +5,7 @@
   "scripts": {
     "build": "next build",
     "postbuild": "next-sitemap",
-    "dev": "next dev  -p 3006",
+    "dev": "next dev  -p 3007",
     "start": "next start",
     "lint": "next lint",
     "analyze": "cross-env ANALYZE=true next build"
@@ -62,7 +62,7 @@
     "web-vitals": "^3.5.2"
   },
   "devDependencies": {
-    "@iconify/react": "^5.0.2",
+    "@iconify/react": "^4.1.1",
     "autoprefixer": "^10.4.21",
     "cross-env": "^7.0.3",
     "eslint": "^8",

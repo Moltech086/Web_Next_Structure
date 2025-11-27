@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 // import { companyMenu, servicesMenu } from "./MenuData.js";
 import "./Header.scss";
 import { companyMenu, servicesMenu } from "./MenuData";
+import ButtonsLink from "../buttons/ButtonsLink";
 
 const Header = () => {
   const pathname = usePathname();
@@ -17,7 +18,6 @@ const Header = () => {
   return (
     <header className={`mol-header ${isDark ? "dark" : "light"}`}>
       <div className="container header-container">
-
         {/* LOGO */}
         <Link href="/" className="header-logo">
           <img src="/logo.svg" alt="Logo" />
@@ -25,7 +25,6 @@ const Header = () => {
 
         {/* NAV */}
         <nav className="header-nav">
-
           <Link href="/">Home</Link>
 
           {/* COMPANY */}
@@ -34,12 +33,16 @@ const Header = () => {
             onMouseEnter={() => setOpenCompany(true)}
             onMouseLeave={() => setOpenCompany(false)}
           >
-            <button className="drop-btn">Company <span>▼</span></button>
+            <button className="drop-btn">
+              Company <span>▼</span>
+            </button>
 
             {openCompany && (
               <div className="simple-dropdown">
                 {companyMenu.map((item, i) => (
-                  <Link key={i} href={item.link}>{item.label}</Link>
+                  <Link key={i} href={item.link}>
+                    {item.label}
+                  </Link>
                 ))}
               </div>
             )}
@@ -51,7 +54,9 @@ const Header = () => {
             onMouseEnter={() => setOpenServices(true)}
             onMouseLeave={() => setOpenServices(false)}
           >
-            <button className="drop-btn">Services <span>▼</span></button>
+            <button className="drop-btn">
+              Services <span>▼</span>
+            </button>
 
             {openServices && (
               <div className="mega-dropdown">
@@ -59,7 +64,9 @@ const Header = () => {
                   <div className="mega-col" key={i}>
                     <h4>{sec.title}</h4>
                     {sec.items.map((item, j) => (
-                      <Link key={j} href="/services">{item}</Link>
+                      <Link key={j} href="/services">
+                        {item}
+                      </Link>
                     ))}
                   </div>
                 ))}
@@ -70,13 +77,16 @@ const Header = () => {
           <Link href="/technology">Technology</Link>
           <Link href="/case-studies">Case Studies</Link>
           <Link href="/contact">Contact Us</Link>
-
         </nav>
 
         {/* CTA BUTTON */}
-        <Link href="/contact" className="chat-btn">
-          <span>💬</span> Let’s Chat
-        </Link>
+        <ButtonsLink
+          buttonText="Let’s Chat"
+          icon="line-md:chat-round-dots"
+          classes="large-btn primary-btn"
+          iconAfter={true}
+          href=""
+        />
       </div>
     </header>
   );

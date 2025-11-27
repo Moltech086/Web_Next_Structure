@@ -1,0 +1,84 @@
+:root {
+  // Colors
+  --primary-color: #f85b05;
+  --secondary-color: #feebe1;
+  --text-color-dark: #212529;
+  --theme-color-bg: #131313;
+  --light-bg-color: #ffefe6;
+  --thme-color-light: #feebe1;
+  --body-text-color: #494949;
+  --header-text-color: #1c1c1c;
+  --section-bg-color: #f3f6fd;
+  --white-color: #ffffff;
+  --black-color: #000000;
+
+  // Borders and shadows
+  --border-color: #c7c7c7;
+  --border-color-light: #494949;
+  --box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.btn {
+  display: block;
+  border-radius: 30px;
+  padding: 5px 20px;
+  height: 45px;
+  width: 140px;
+  min-width: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s all;
+  .iconify {
+    font-size: 115%;
+    &.left-icon {
+      margin-right: 5px;
+    }
+    &.right-icon {
+      margin-left: 5px;
+    }
+  }
+
+  &.small-btn {
+    height: 37px;
+    width: 120px;
+    min-width: max-content;
+    padding: 5px 15px;
+  }
+
+  &.btn-round {
+    min-height: 45px;
+    min-width: 45px;
+    max-height: 45px;
+    max-width: 45px;
+    border-radius: 100%;
+    padding: 5px;
+    .iconify {
+      margin-left: 0;
+    }
+  }
+
+  &.square-btn {
+    padding: 5px 17px;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+  }
+  &.primary-btn {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+    border: 1px solid var(--primary-color);
+    &:hover {
+      background-color: var(--secondary-color);
+      color: var(--primary-color);
+      border: 1px solid var(--primary-color);
+    }
+  }
+  &.secondary-btn {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+    &:hover {
+      background-color: var(--primary-color);
+      color: var(--white-color);
+    }
+  }
+}
